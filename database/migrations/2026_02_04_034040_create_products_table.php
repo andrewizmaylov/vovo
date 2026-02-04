@@ -20,6 +20,17 @@ return new class extends Migration
             $table->boolean('in_stock')->default(false)->comment('Флаг наличия товара');
             $table->float('rating')->default(0)->comment('Рейтинг товара');
             $table->timestamps();
+
+            $table->index('name');
+            $table->index('category_id');
+            $table->index('in_stock');
+            $table->index('price');
+            $table->index('rating');
+            $table->index('created_at');
+
+            $table->index(['category_id', 'price']);
+            $table->index(['category_id', 'rating']);
+            $table->index(['category_id', 'created_at']);
         });
     }
 
