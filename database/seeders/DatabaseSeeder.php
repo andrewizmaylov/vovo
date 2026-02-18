@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 //            'email' => 'test@example.com',
 //        ]);
 
-        for ($i = 1; $i <= 1000; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             Product::factory(10_000)->create();
         }
     }

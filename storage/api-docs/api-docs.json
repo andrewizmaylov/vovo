@@ -18,7 +18,8 @@
                     "Products"
                 ],
                 "summary": "Get products list with filtering and pagination",
-                "operationId": "ec798fa9dfb90498929bcad99a044e25",
+                "description": "OpenAPI operation for GET /products.\nKept separate from the controller so the controller stays focused on HTTP/business logic.",
+                "operationId": "b833ae163c451005c73504166891f870",
                 "parameters": [
                     {
                         "name": "page",
@@ -380,6 +381,7 @@
             "Product": {
                 "properties": {
                     "id": {
+                        "description": "OpenAPI schema for Product. Kept separate from the Eloquent model so the model stays focused on data/business logic.",
                         "type": "integer",
                         "example": 1
                     },
